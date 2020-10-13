@@ -74,10 +74,7 @@ const configuration = {
 var response11 = (JSON.stringify(state.data));
 var EXECUTE_URL = 'CPayServer.php';
 
-                  // $.get(EXECUTE_URL, function(response11) {
-                 //     alert(response1);
-                       //return;
-                   // });
+      
                $.ajax({
                     type: 'POST',
                     url: EXECUTE_URL,
@@ -91,11 +88,11 @@ paymentID:JSON.stringify(state.data.paymentMethod)
  
    },
  paymentMethodsConfiguration: {
-   card: { // Example optional configuration for Cards
+   card: { 
      hasHolderName: true,
      holderNameRequired: true,
      enableStoreDetails: true,
-     hideCVC: false, // Change this to true to hide the CVC field for stored cards
+     hideCVC: false, 
      name: 'Credit or debit card'
    }
  }
